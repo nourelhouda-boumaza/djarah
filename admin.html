@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>tableau de bord</title>
+</head>
+
+<body class="page-layout">
+  <nav class="navbar">
+    <ul>
+      <li><a href="./admin.html">Interventions</a></li>
+      <li><a href="./medecins.html">comptes médecins</a></li>
+      <li><a href="./demandes.html">demandes de coordonnées</a></li>
+    </ul>
+    <div style="padding: 0%; margin: 0%; height: 80%;">
+      <i class="fa-solid fa-bell"></i>
+    <button class="btn">Se Deconnecter</button>
+  </nav>
+  <div class="main-content">
+    <div>
+
+      <h1 class="section-title">Liste des interventions</h1>
+
+      <div class="list">
+        <input type="text" id="myInput" onkeyup="myFunction()"
+          placeholder="Chercher par nom, prénom, identificateur, age, groupage, type d'intervention ou maladies pré existantes" title="Type in a name">
+
+        <table id="myTable">
+          <tr class="header">
+            <thead>
+              <tr>
+                <th scope="col">identificateur</th>
+                <th scope="col">Nom</th>
+                <th scope="col">Prénom</th>
+                <th scope="col">Age</th>
+                <th scope="col">Groupage</th>
+                <th scope="col">type d'intervention</th>
+                <th scope="col">Maladies pré existantes</th>
+                <th scope="col">dossier médicale</th>
+                <th scope="col">Cordonnées</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+              <tr>
+                <td>1</td>
+                <td>Dupont</td>
+                <td>Paul</td>
+                <td>45</td>
+                <td>A+</td>
+                <td>Appendicectomie</td>
+                <td>Hypertension</td>
+                <td><a href="./dossier.html">Consulter</a></td>
+                <td><h3>0778666276</h3> <h3>dupont@gmail.com</h3></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Smith</td>
+                <td>Emily</td>
+                <td>32</td>
+                <td>O-</td>
+                <td>Laparoscopie</td>
+                <td>Asthme</td>
+                <td><a href="./dossier.html" cl>Consulter</a></td>
+                <td><h3>07647473882</h3> <h3>Smithupont@gmail.com</h3></td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Johnson</td>
+                <td>Michael</td>
+                <td>55</td>
+                <td>B-</td>
+                <td>Chirurgie cardiaque</td>
+                <td>Diabète de type 2</td>
+                <td><a href="./dossier.html" cl>Consulter</a></td>
+                <td><h3>0568686868</h3> <h3>Johnson@gmail.com</h3></td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Garcia</td>
+                <td>Isabella</td>
+                <td>28</td>
+                <td>AB+</td>
+                <td>Résection intestinale</td>
+                <td>Scoliose</td>
+                <td><a href="./dossier.html" cl>Consulter</a></td>
+                <td><h3>0678908767</h3> <h3>Garcia@gmail.com</h3></td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Chen</td>
+                <td>Wei</td>
+                <td>50</td>
+                <td>O+</td>
+                <td>Transplantation rénale</td>
+                <td>Cholestérol élevé</td>
+                <td><a href="./dossier.html" cl>Consulter</a></td>
+                <td><h3>0775378765</h3> <h3>Chen@gmail.com</h3></td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>Kim</td>
+                <td>Seung</td>
+                <td>40</td>
+                <td>A-</td>
+                <td>Chirurgie plastique</td>
+                <td>Arthrite</td>
+                <td><a href="./dossier.html" cl>Consulter</a></td>
+                <td><h3>0778666276</h3> <h3>Seung@gmail.com</h3></td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>Müller</td>
+                <td>Johann</td>
+                <td>60</td>
+                <td>AB-</td>
+                <td>Greffe de moelle osseuse</td>
+                <td>Maladie coronarienne</td>
+                <td><a href="./dossier.html" cl>Consulter</a></td>
+                <td><h3>071234568</h3> <h3>Müller@gmail.com</h3></td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>Li</td>
+                <td>Xia</td>
+                <td>35</td>
+                <td>B+</td>
+                <td>Chirurgie thoracique</td>
+                <td>Insuffisance rénale</td>
+                <td><a href="./dossier.html" cl>Consulter</a></td>
+                <td><h3>087654321</h3> <h3>LI@gmail.com</h3></td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>Anderson</td>
+                <td>Emma</td>
+                <td>48</td>
+                <td>A+</td>
+                <td>Réparation de fracture</td>
+                <td>Fibromyalgie</td>
+                <td><a href="./dossier.html" cl>Consulter</a></td>
+                <td><h3>02345678</h3> <h3>Anszs@gmail.com</h3></td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>Gonzalez</td>
+                <td>Carlos</td>
+                <td>42</td>
+                <td>O-</td>
+                <td>Chirurgie de pontage</td>
+                <td>Maladie de Crohn</td>
+                <td><a href="./dossier.html" cl>Consulter</a></td>
+                <td><h3>0778666276</h3> <h3>dupont@gmail.com</h3></td>
+              </tr>
+              <tr>
+                <td>11</td>
+                <td>Wang</td>
+                <td>Ling</td>
+                <td>38</td>
+                <td>AB+</td>
+                <td>Amputation</td>
+                <td>Lupus</td>
+                <td><a href="./dossier.html" cl>Consulter</a></td>
+                <td><h3>0778666276</h3> <h3>dupont@gmail.com</h3></td>
+              </tr>
+              <tr>
+                <td>12</td>
+                <td>Santos</td>
+                <td>Maria</td>
+                <td>70</td>
+                <td>B-</td>
+                <td>Chirurgie bariatrique</td>
+                <td>Ostéoporose</td>
+                <td><a href="./dossier.html" cl>Consulter</a></td>
+                <td><h3>0778666276</h3> <h3>dupont@gmail.com</h3></td>
+              </tr>
+              <tr>
+                <td>13</td>
+                <td>Kaur</td>
+                <td>Amanpreet</td>
+                <td>25</td>
+                <td>O+</td>
+                <td>Résection pulmonaire</td>
+                <td>Hémophilie</td>
+                <td><a href="./dossier.html" cl>Consulter</a></td>
+                <td><h3>0778666276</h3> <h3>dupont@gmail.com</h3></td>
+              </tr>
+              <tr>
+                <td>14</td>
+                <td>Martinez</td>
+                <td>Luis</td>
+                <td>58</td>
+                <td>A-</td>
+                <td>Greffe de foie</td>
+                <td>Cancer</td>
+                <td><a href="./dossier.html" cl>Consulter</a></td>
+                <td><h3>0778666276</h3> <h3>dupont@gmail.com</h3></td>
+              </tr>
+              <tr>
+                <td>15</td>
+                <td>Nguyen</td>
+                <td>Thi</td>
+                <td>47</td>
+                <td>AB+</td>
+                <td>Chirurgie orthopédique</td>
+                <td>Maladie de Parkinson</td>
+                <td><a href="./dossier.html" cl>Consulter</a></td>
+                <td><h3>0778666276</h3> <h3>dupont@gmail.com</h3></td>
+              </tr>
+              <tr>
+                <td>16</td>
+                <td>Lee</td>
+                <td>Hyun</td>
+                <td>30</td>
+                <td>B-</td>
+                <td>Chirurgie neurologique</td>
+                <td>Épilepsie</td>
+                <td><a href="./dossier.html" cl>Consulter</a></td>
+                <td><h3>0778666276</h3> <h3>dupont@gmail.com</h3></td>
+              </tr>
+              <tr>
+                <td>17</td>
+                <td>Gupta</td>
+                <td>Raj</td>
+                <td>53</td>
+                <td>O+</td>
+                <td>Chirurgie vasculaire</td>
+                <td>Apnée du sommeil</td>
+                <td><a href="./dossier.html" cl>Consulter</a></td>
+                <td><h3>0778666276</h3> <h3>dupont@gmail.com</h3></td>
+              </tr>
+              <tr>
+                <td>18</td>
+                <td>Kim</td>
+                <td>Ji</td>
+                <td>37</td>
+                <td>A-</td>
+                <td>Réimplantation digitale</td>
+                <td>Maladie cœliaque</td>
+                <td><a href="./dossier.html" cl>Consulter</a></td>
+                <td><h3>0778666276</h3> <h3>dupont@gmail.com</h3></td>
+              </tr>
+              <tr>
+                <td>19</td>
+                <td>Chang</td>
+                <td>Wei</td>
+                <td>49</td>
+                <td>AB-</td>
+                <td>Chirurgie ophtalmologique</td>
+                <td>Hyperthyroïdie</td>
+                <td><a href="./dossier.html" cl>Consulter</a></td>
+                <td><h3>0778666276</h3> <h3>dupont@gmail.com</h3></td>
+              </tr>
+              <tr>
+                <td>20</td>
+                <td>Patel</td>
+                <td>Aarav</td>
+                <td>41</td>
+                <td>B+</td>
+                <td>Transplantation hépatique</td>
+                <td>Maladie de Lyme</td>
+                <td><a href="./dossier.html" cl>Consulter</a></td>
+                <td><h3>0778666276</h3> <h3>dupont@gmail.com</h3></td>
+              </tr>
+
+            </tbody>
+        </table>
+      </div>
+    </div>
+    <footer class="footer">
+    </footer>
+    <script>
+      function myFunction() {
+        var input, filter, table, tr, td, td1, td2, td3, td4, td5, td6, i, txtValue, txtValue1, txtValue2, txtValue3, txtValue4,txtValue5,txtValue6;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+          td = tr[i].getElementsByTagName("td")[0];
+          td1 = tr[i].getElementsByTagName("td")[1];
+          td2 = tr[i].getElementsByTagName("td")[2];
+          td3 = tr[i].getElementsByTagName("td")[3];
+          td4 = tr[i].getElementsByTagName("td")[4];
+          td5 = tr[i].getElementsByTagName("td")[5];
+          td6 = tr[i].getElementsByTagName("td")[6];
+          if (td || td1 || td2 || td3 || td4|| td5 || td6) {
+            txtValue = td.textContent || td.innerText;
+            txtValue1 = td1.textContent || td1.innerText;
+            txtValue2 = td2.textContent || td2.innerText;
+            txtValue3 = td3.textContent || td3.innerText;
+            txtValue4 = td4.textContent || td4.innerText;
+            txtValue5 = td5.textContent || td5.innerText;
+            txtValue6 = td6.textContent || td6.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1 || txtValue1.toUpperCase().indexOf(filter) > -1 || txtValue2.toUpperCase().indexOf(filter) > -1 || txtValue3.toUpperCase().indexOf(filter) > -1 || txtValue4.toUpperCase().indexOf(filter) > -1 || txtValue5.toUpperCase().indexOf(filter) > -1 || txtValue6.toUpperCase().indexOf(filter) > -1) {
+              tr[i].style.display = "";
+            } else {
+              tr[i].style.display = "none";
+            }
+          }
+        }
+      }
+    </script>
+    <script src="https://kit.fontawesome.com/9e021aac67.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

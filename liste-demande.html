@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Liste des Artiles</title>
+</head>
+
+<body class="page-layout">
+  <nav class="navbar">
+    <ul>
+      <li><a href="./dashboard-doctor.html">Interventions</a></li>
+      <li><a href="./liste-demande.html">Mes demandes</a></li>
+    </ul>
+    <div style="padding: 0%; margin: 0%; height: 80%;">
+      <i class="fa-solid fa-bell"></i>
+    <button class="btn">Se Deconnecter</button>
+  </nav>
+  <div class="main-content">
+    <div>
+
+      <h1 class="section-title">Mes demandes</h1>
+
+      <div class="list">
+        <input type="text" id="myInput" onkeyup="myFunction()"
+          placeholder="Chercher par nom, identificateur, date ou description" title="Type in a name">
+
+        <table id="myTable">
+          <tr class="header">
+            <thead>
+              <tr>
+                <th scope="col">identificateur</th>
+                <th scope="col">Nom</th>
+                <th scope="col">Prénom</th>
+                <th scope="col">Age</th>
+                <th scope="col">Groupage</th>
+                <th scope="col">type d'intervention</th>
+                <th scope="col">Maladies pré existantes</th>
+                <th scope="col">dossier médicale</th>
+                <th scope="col">Cordonnées</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+              <tr>
+                <td>1</td>
+                <td>Dupont</td>
+                <td>Paul</td>
+                <td>45</td>
+                <td>A+</td>
+                <td>Appendicectomie</td>
+                <td>Hypertension</td>
+                <td><a href="./dossier.html">Consulter</a></td>
+                <td style="background-color: #00FF40;"><h3>0778666276</h3> <h3>dupont@gmail.com</h3></td>
+                
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Smith</td>
+                <td>Emily</td>
+                <td>32</td>
+                <td>O-</td>
+                <td>Laparoscopie</td>
+                <td>Asthme</td>
+                <td><a href="./dossier.html" cl>Consulter</a></td>
+                <td style="background-color: #FEBE10;">En cours de traitement</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Johnson</td>
+                <td>Michael</td>
+                <td>55</td>
+                <td>B-</td>
+                <td>Chirurgie cardiaque</td>
+                <td>Diabète de type 2</td>
+                <td><a href="./dossier.html" cl>Consulter</a></td>
+                <td style="background-color: #FF0800; color: white;">Rejeté</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Garcia</td>
+                <td>Isabella</td>
+                <td>28</td>
+                <td>AB+</td>
+                <td>Résection intestinale</td>
+                <td>Scoliose</td>
+                <td><a href="./dossier.html" cl>Consulter</a></td>
+                <td style="background-color: #FEBE10;">En cours de traitement</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Chen</td>
+                <td>Wei</td>
+                <td>50</td>
+                <td>O+</td>
+                <td>Transplantation rénale</td>
+                <td>Cholestérol élevé</td>
+                <td><a href="./dossier.html" cl>Consulter</a></td>
+                <td style="background-color: #00FF40;"><h3>0666666666</h3> <h3>Chen@gmail.com</h3></td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>Kim</td>
+                <td>Seung</td>
+                <td>40</td>
+                <td>A-</td>
+                <td>Chirurgie plastique</td>
+                <td>Arthrite</td>
+                <td><a href="./dossier.html" cl>Consulter</a></td>
+                <td style="background-color: #FF0800; color: white;">Rejeté</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>Müller</td>
+                <td>Johann</td>
+                <td>60</td>
+                <td>AB-</td>
+                <td>Greffe de moelle osseuse</td>
+                <td>Maladie coronarienne</td>
+                <td><a href="./dossier.html" cl>Consulter</a></td>
+                <td style="background-color: #FF0800; color: white;">Rejeté</td>
+              </tr>
+              
+
+            </tbody>
+        </table>
+      </div>
+    </div>
+    <footer class="footer">
+    </footer>
+    <script>
+      function myFunction() {
+        var input, filter, table, tr, td, td1, td2, td3, i, txtValue, txtValue1, txtValue2, txtValue3;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+          td = tr[i].getElementsByTagName("td")[0];
+          td1 = tr[i].getElementsByTagName("td")[1];
+          td2 = tr[i].getElementsByTagName("td")[2];
+          td3 = tr[i].getElementsByTagName("td")[3];
+          if (td || td1 || td2 || td3) {
+            txtValue = td.textContent || td.innerText;
+            txtValue1 = td1.textContent || td1.innerText;
+            txtValue2 = td2.textContent || td2.innerText;
+            txtValue3 = td3.textContent || td3.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1 || txtValue1.toUpperCase().indexOf(filter) > -1 || txtValue2.toUpperCase().indexOf(filter) > -1 || txtValue3.toUpperCase().indexOf(filter) > -1) {
+              tr[i].style.display = "";
+            } else {
+              tr[i].style.display = "none";
+            }
+          }
+        }
+      }
+    </script>
+    <script src="https://kit.fontawesome.com/9e021aac67.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

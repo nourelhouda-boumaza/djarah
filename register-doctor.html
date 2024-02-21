@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Se Connecter</title>
+</head>
+
+<body class="login">
+  <div class="card ">
+    <div class="info-container">
+      <h1 class="section-title">Créer un compte</h1>
+      <div class="text-container" style="margin-bottom: 20px;">
+        <p>Veuillez remplir le formulaire ci-dessous pour créer votre compte et commencer à choisir les interventions chirurgicales que vous souhaitez effectuer.</p>
+        <p>Vos informations sont confidentielles et sécurisées. Nous ne les partagerons jamais avec des tiers. </p>
+        <p>En soumettant ce formulaire, vous acceptez nos conditions générales d'utilisation et notre politique de confidentialité.</p>
+        <p>Lors de la sélection l’intervention, veuillez contacter notre messagerie pour vous envoyer les coordonnés du patient.</p>
+      </div>
+
+      <form action="dashboard-doctor.html" method="post">
+        <label for="nom">Nom</label>
+        <input type="text" id="nom" name="nom" placeholder="..." class="input" required>
+        <label for="prenom">Prénom</label>
+        <input type="text" id="prenom" name="prenom" placeholder="..." class="input" required>
+        <label for="naissance">Date de naissance</label>
+        <input type="date" id="naissance" name="naissance" placeholder="..." class="input" required>
+        <label for="telephone">Numéro de téléphone</label>
+        <input type="number" id="" name="telephone" placeholder="000000000" class="input" required>
+        <label for="specialite">Spécialité</label>
+        <select name="specialite" id="specialite" class="input">
+          <option value="Chirurgie générale">Chirurgie générale</option>
+          <option value="Neurochirurgie">Neurochirurgie</option>
+          <option value="Traumato-orthopedie">Traumato-orthopedie</option>
+          <option value="c.c.i">c.c.i</option>
+          <option value="urologie">urologie</option>
+          <option value="ophtalmologie">ophtalmologie</option>
+          <option value="orl">orl</option>
+          <option value="gyneco-obtetrie">gyneco-obtetrie</option>
+          <option value="cardiothoracique">cardiothoracique</option>
+          <option value="vasculaire">vasculaire</option>
+          <option value="chirurgie plastique">chirurgie plastique</option>
+          <option value="autres">autres</option>
+        </select>
+        <label for="structure">Structure</label>
+        <select name="structure" id="structure" class="input">
+          <option value="étatique">Etatique</option>
+          <option value="liberale">Liberale</option>
+          <option value="clinique">Clinique</option>
+          <option value="hopital privé">Hopital Privé</option>
+        </select>
+        
+        <label for="adresse">Adresse  professionnelle</label>
+        <input type="text" id="nom" name="nom" placeholder="..." class="input" required>
+        <label for="diplome">Diplome de Spécialité (version scannée ou pdf) :</label>
+        <input type="file" id="diplome" name="diplome" placeholder="..." class="input">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="..." class="input" required>
+        <label for="password">Mot de passe</label>
+        <input type="password" id="password" name="password" placeholder="..." class="input" required>
+        <a href="./dashboard-doctor.html"><input type="submit" name="submit" value="Créer compte" class="btn"></a>
+      </form>
+    </div>
+    <img src="./images/doctor.svg" alt="">
+  </div>
+
+</body>
+
+</html>

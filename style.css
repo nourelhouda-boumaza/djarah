@@ -1,0 +1,488 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@700&family=Raleway:ital@1&family=Roboto&family=Roboto+Flex:opsz,wght@8..144,200&display=swap');
+
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* variables */
+:root {
+  /*--green: #04AA6D;*/
+  --green: #88BED7;
+  --blue: #378bb3;
+  --gray: #D8DDEF;
+
+}
+
+body {
+  height: 100vh;
+}
+
+/* Media query for small devices */
+@media only screen and (max-width: 767px) {
+  .info-container {
+    width: 90%;
+    margin: 1rem;
+  }
+
+  .landing-img {
+    width: 90%;
+    margin: 1rem;
+  }
+
+}
+
+/* Media query for medium devices */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .info-container {
+    width: 90%;
+    margin: 1rem;
+  }
+
+  .landing-img {
+    width: 90%;
+    margin: 1rem;
+  }
+}
+
+/* Media query for large devices */
+@media only screen and (min-width: 992px) {
+  .card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "txt img";
+    gap: 1rem;
+  }
+
+  .info-container {
+    margin-left: 1rem;
+    align-self: center;
+  }
+
+  .landing-img {
+    width: 90%;
+    height: 90%;
+    margin: 1rem;
+  }
+
+  .img-right {
+    order: 2;
+
+  }
+
+}
+
+/* Styles for printed pages */
+@media print {
+  /* Styles for printed pages */
+}
+
+@media (hover: hover) {
+  /* Styles for devices that support hover (typically mouse-based) */
+}
+
+@media (hover: none) {
+  /* Styles for devices that don't support hover (typically touch-based) */
+}
+
+/* Default styles for all devices */
+/*
+.landing-page, .login{
+  background: rgb(175, 237, 203);
+  background: linear-gradient(90deg, rgba(175, 237, 203, 1) 0%, rgba(109, 109, 103, 1) 100%);
+}
+*/
+.page-layout {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 60px auto 0px;
+  grid-template-areas:
+    "navbar navbar"
+    "main-content main-content"
+    "footer footer";
+  padding: 0%;
+  margin: 0%;
+
+}
+
+.navbar {
+  grid-area: navbar;
+  background-color: #D8DDEF;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  
+  padding: 0;
+
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  width: 40%;
+  height: 100%;
+}
+
+.navbar li {
+  margin: 0%;
+  width: 100%;
+  height: 100%;
+}
+
+.navbar a {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  font-family: 'Raleway', sans-serif;
+  align-self: center;
+}
+
+.navbar a:hover {
+  background-color: var(--green);
+}
+
+.navbar .btn {
+  padding: 0% 1rem;
+  margin-right: 1rem;
+  margin-bottom: 5%;
+  height: 75%;
+  text-align: center;
+  font-family: 'Manrope 700', sans-serif;
+
+
+
+}
+
+.main-content {
+  grid-area: main-content;
+}
+
+.footer {
+  background-color: #88BED7;
+  width: 100%;
+  height: 6rem;
+  padding-left: 5%;
+  grid-area: footer;
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+
+
+
+/*
+.card {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin: 30px 0 30px 0;
+
+}
+*/
+
+.link-card {
+  width: 200px;
+  height: 200px;
+  padding: 50px 0%;
+  background-color: var(--green);
+  border-radius: 8px;
+}
+
+.card-list- {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin: 10% 20%;
+  height: 100vh;
+}
+
+.section-title {
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+
+}
+
+.text-container {
+  padding: 1rem;
+  background-color: var(--green);
+
+  border-radius: 8px;
+}
+
+/* buttons styling */
+.btn {
+  padding: 1rem;
+  margin: 1rem;
+  width: max-content;
+  background-color: var(--green);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+}
+
+.btn-top-right {
+  position: fixed;
+  top: 0.25rem;
+  right: 0.25rem;
+
+}
+
+.btn:hover {
+  background-color: var(--blue);
+  color: white;
+
+}
+
+.login {
+  height: 100vh;
+
+}
+
+.login img {
+  width: 90%;
+  height: auto;
+  margin: 1rem;
+}
+
+.login:enabled {
+  color: blue;
+}
+
+.input {
+  display: block;
+  width: 95%;
+  height: 40px;
+  border-color: var(--green);
+  border-radius: 16px;
+  margin: 10px;
+  padding-left: 12px;
+}
+
+.list {
+  margin: 1%;
+}
+
+.image-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: stretch;
+  margin: 2%;
+}
+
+.article-image {
+  margin: 10px;
+}
+
+
+/* styles for tables */
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 0.1px solid #ddd;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+}
+
+#myTable th {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header,
+#myTable tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* styling by tagnames */
+
+
+p {
+  font-family: 'Roboto Flex', sans-serif;
+  font-size: 1.2rem;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-family: 'Manrope 700', sans-serif;
+
+
+
+}
+
+a:hover {
+  color: white;
+}
+
+input:enabled {
+  outline: none;
+}
+
+/*dropdown style */
+.dropbtn {
+  background-color: #85FFBD;
+  background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+/* pages styling */
+.admin {
+  background: white;
+}
+
+/* landing page cards */
+.services-container {
+  background-color: #88BED7;
+  padding: 20px;
+}
+
+.services-title {
+  color: #fff;
+  text-align: center;
+}
+
+.card-list {
+
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card-landing {
+  width: calc(30% - 20px);
+  /* Adjust as needed */
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  color: #333;
+  margin-top: 0;
+}
+
+.card-landing p {
+  margin-bottom: 0;
+}
+
+/*tables */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th, td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}
+
+td a{
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  font-family: 'Raleway', sans-serif;
+  align-self: center;
+  font-weight: bold;
+}
+td a:hover{
+ color: var(--blue);
+ 
+}
+.btn-action {
+  padding: 5px 10px;
+  cursor: pointer;
+  border: none;
+  margin: 0;
+}
+.approuver {
+  background-color: green;
+  color: white;
+  width: 100%;
+}
+.rejeter {
+  background-color: red;
+  color: white;
+  width: 100%;
+}
+ul{
+  font-family: 'Roboto Flex', sans-serif;
+}

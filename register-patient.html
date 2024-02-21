@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Se Connecter</title>
+</head>
+
+<body class="login">
+  <div class="info-container">
+    <h1 class="section-title">Espace patient</h1>
+    <div class="text-container" style="margin-bottom: 20px;">
+      <p>Bienvenue sur notre site ! Nous sommes ravis de vous aider à commencer votre parcours vers une intervention chirurgicale.</p>
+      <p>Notre plateforme vous aide à:</p>
+      <ul>
+        <li>Trouvez un Chirurgien : notre outil de recherche va vous trouver des chirurgiens qualifiés dans votre région ou dans le domaine spécifique de l'intervention chirurgicale que vous envisagez.</li>
+        <li>Prendre un Rendez-vous pour une consultation : Rencontrez un chirurgien pour discuter de vos options de traitement, poser des questions et prendre des décisions éclairées sur votre intervention chirurgicale.</li>
+        <li>Programmer votre opération.</li>
+      </ul>
+      <p>Veuillez remplir le formulaire ci-dessous pour créer votre compte et commencer le processus d'inscription.</p>
+      <p>En soumettant ce formulaire, vous acceptez nos conditions générales d'utilisation et notre politique de confidentialité.</p>
+    </div>
+  </div>
+  <div class="card ">
+    <div class="info-container">
+
+      <form action="" method="post">
+        <label for="nom">Nom</label>
+        <input type="text" id="nom" name="nom" placeholder="..." class="input" required>
+        <label for="prenom">Prénom</label>
+        <input type="text" id="prenom" name="prenom" placeholder="..." class="input" required>
+        <label for="naissance">Date de naissance</label>
+        <input type="date" id="naissance" name="naissance" placeholder="..." class="input" required>
+        <label for="telephone">Numéro de téléphone</label>
+        <input type="number" id="" name="telephone" placeholder="000000000" class="input" required>
+        <label for="adresse">Adresse</label>
+        <input type="text" id="nom" name="nom" placeholder="..." class="input" required>
+        <label for="pre-maladies">Maladies pré éxistantes</label>
+        <input type="text" id="pre-maladies" name="pre-maladies" placeholder="..." class="input">
+        <label for="groupage_sanguin">Groupage Sanguin</label>
+        <select name="groupage_sanguin" id="groupage_sanguin" class="input" required>
+          <option value="A+">A+</option>
+          <option value="A-">A-</option>
+          <option value="B+">B+</option>
+          <option value="B-">B-</option>
+          <option value="AB+">AB+</option>
+          <option value="AB-">AB-</option>
+          <option value="O+">O+</option>
+          <option value="O-">O-</option>
+        </select>
+        
+        <label for="type-intervention">Type d'Intervention</label>
+        <input type="text" id="type-intervention" name="type-intervention" placeholder="..." class="input" required>
+        <label for="bilan">Bilan médical</label>
+        <input type="file" id="bilan" name="bilan" placeholder="..." class="input">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Email" class="input" required>
+        <label for="password">Mot de passe</label>
+        <input type="password" id="password" name="password" placeholder="Password" class="input" required>
+        <a href="./dashboard-patient.html"><input type="submit" name="login" value="Publier Annonce" class="btn"></a>
+      </form>
+    </div>
+    <img src="./images/patient.svg" alt="" style="margin-top: 7rem;">
+  </div>
+
+</body>
+
+</html>
