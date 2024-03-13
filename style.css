@@ -117,7 +117,7 @@ body {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  
+
   padding: 0;
 
 }
@@ -138,7 +138,7 @@ body {
   height: 100%;
 }
 
-.navbar a {
+.navbar a:not(.exeption) {
   text-decoration: none;
   display: block;
   width: 100%;
@@ -148,7 +148,7 @@ body {
   align-self: center;
 }
 
-.navbar a:hover {
+.navbar a:not(.exeption):hover {
   background-color: var(--green);
 }
 
@@ -447,13 +447,15 @@ table {
   border-collapse: collapse;
   width: 100%;
 }
-th, td {
+
+th,
+td {
   border: 1px solid black;
   padding: 8px;
   text-align: left;
 }
 
-td a{
+td a {
   text-decoration: none;
   display: block;
   width: 100%;
@@ -463,26 +465,41 @@ td a{
   align-self: center;
   font-weight: bold;
 }
-td a:hover{
- color: var(--blue);
- 
+
+td a:hover {
+  color: var(--blue);
+
 }
+
 .btn-action {
   padding: 5px 10px;
   cursor: pointer;
   border: none;
   margin: 0;
 }
+
 .approuver {
   background-color: green;
   color: white;
   width: 100%;
 }
+
 .rejeter {
   background-color: red;
   color: white;
   width: 100%;
 }
-ul{
+
+ul {
   font-family: 'Roboto Flex', sans-serif;
+}
+
+.nav-right {
+  width: 25%;
+  padding: 0%;
+  margin: 0%;
+  height: 80%;
+
+
+
 }
